@@ -19,3 +19,6 @@
     - :e-mail: victoralmeida.0216@gmail.com
     - :e-mail: maryaferreira94@gmail.com
     - :e-mail: rayrissonvinicius@gmail.com
+
+- ## Link Trello
+    - [MyClinic](https://trello.com/invite/myclinic17/995a7d56155536d67a5a9717ae76f2a0)
