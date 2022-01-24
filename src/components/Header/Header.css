@@ -1,0 +1,14 @@
+.Header{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-bottom: 0.9375rem;
+}
+
+.Header h1{
+    color: #1e88e5;
+    margin: 15px;
+}
