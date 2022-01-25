@@ -1,4 +1,4 @@
-import { collection, getDocs, doc, deleteDoc} from "firebase/firestore";
+import { collection, getDocs, setDoc, doc, deleteDoc} from "firebase/firestore";
 import { db } from "../config/firebase-config";
 
     const getDoctors = async(setData) => {
@@ -19,5 +19,9 @@ import { db } from "../config/firebase-config";
         await deleteDoc(doc(db, "Medicos", id));
     }
 
-export {getDoctors, deleteDoctor};
+    const addDoctor = async(object) => {
+        await setDoc(doc(db, "Medicos", object.crm), object);
+    }
+
+export {getDoctors, deleteDoctor, addDoctor};
     
