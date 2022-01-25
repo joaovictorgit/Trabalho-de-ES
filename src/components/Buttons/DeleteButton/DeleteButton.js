@@ -2,9 +2,9 @@ import React from "react";
 import {AiFillDelete} from '@react-icons/all-files/ai/AiFillDelete'
 import './DeleteButton.css'
 
-const DeleteButton = ({deleteFunction, id}) => {
+const DeleteButton = ({onClick = null}) => {
     return (
-        <button className="DeleteButton" onClick={() => deleteFunction(id)}>
+        <button className="DeleteButton" onClick={onClick}>
             <span><AiFillDelete/></span>
             <span>Deletar</span>
         </button>

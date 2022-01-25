@@ -34,7 +34,7 @@ const Table = ({tableTitles, tableData, deleteFunction}) => {
                                     <span className="TableItem" key={key}>{item}</span>
                                 )
                             })}
-                            <div className="TableItem"><DeleteButton deleteFunction={deleteFunction} id={allValue()[0]}/></div>
+                            <div className="TableItem"><DeleteButton onClick={() => deleteFunction(allValue()[0])}/></div>
                         </div>
                     )
                 })}
