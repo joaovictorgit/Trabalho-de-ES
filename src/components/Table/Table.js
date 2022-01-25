@@ -2,7 +2,7 @@ import React from "react";
 import DeleteButton from "../Buttons/DeleteButton/DeleteButton";
 import './Table.css'
 
-const Table = ({tableTitles, tableData}) => {
+const Table = ({tableTitles, tableData, deleteFunction}) => {
     return (
         <div className="Table">
             <div className="TableTitle">
@@ -34,7 +34,7 @@ const Table = ({tableTitles, tableData}) => {
                                     <span className="TableItem" key={key}>{item}</span>
                                 )
                             })}
-                            <div className="TableItem"><DeleteButton/></div>
+                            <div className="TableItem"><DeleteButton deleteFunction={deleteFunction} id={allValue()[0]}/></div>
                         </div>
                     )
                 })}

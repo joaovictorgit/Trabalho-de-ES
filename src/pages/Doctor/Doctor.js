@@ -5,20 +5,28 @@ import './Doctor.css'
 import Actions from "../../components/Actions/Actions";
 import Header from "../../components/Header/Header";
 import {FaUserMd} from '@react-icons/all-files/fa/FaUserMd'
-import getDoctors from "../../controllers/DoctorController";
+import  getDoctors from "../../controllers/DoctorController";
+import { doc, deleteDoc} from "firebase/firestore";
+import { db } from "../../config/firebase-config";
 
 const Doctor = () => {
     const [doctorData, setDoctorData] = useState([]);
 
+    const deleteDoctors = async(id) => {
+        await deleteDoc(doc(db, "Medicos", id));
+        console.log(id);
+    }
+    
     useEffect(() => {
-        setDoctorData(getDoctors());
-    })
+        getDoctors(setDoctorData);
+        console.log(doctorData);
+    }, []);
 
     return (
         <div className="Doctor">
             <Header title={"Médicos"} icon={<FaUserMd/>}/>
-            <Actions/>
-            <Table tableTitles={['CRM', 'Nome', 'Especialização']} tableData={doctorData}/>
+            <Actions callback={getDoctors(setDoctorData)}/>
+            <Table tableTitles={['CRM', 'Nome', 'Email', 'Especialização']} tableData={doctorData} deleteFunction={deleteDoctors}/>
         </div>
     )
 }
