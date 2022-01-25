@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import {IoIosAdd} from '@react-icons/all-files/io/IoIosAdd'
 import './AddButton.css'
 
-const AddButton = ({callback}) => {
+const AddButton = ({activeModal}) => {
     return (
-        <button className="AddButton" onClick={() => callback}>
+        <button className="AddButton" onClick={() => activeModal(true)}>
             <span><IoIosAdd/></span>
             <span>Adicionar</span>
         </button>

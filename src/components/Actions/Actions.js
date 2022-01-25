@@ -3,10 +3,10 @@ import AddButton from '../Buttons/AddButton/AddButton';
 import SearchBox from "../SearchBox/SearchBox";
 import './Actions.css'
 
-const Actions = ({callback}) => {
+const Actions = ({activeModal}) => {
     return (
         <div className="Actions">
-            <AddButton callback = {callback}/>
+            <AddButton activeModal={activeModal}/>
             <SearchBox/>
         </div>
     )

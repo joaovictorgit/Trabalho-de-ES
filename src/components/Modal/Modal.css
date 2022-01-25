@@ -1,0 +1,100 @@
+.Modal{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*background-color: rgba($color: #000000, $alpha: 0.8);*/
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fade-in .5s;
+}
+
+.ModalClose{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /*background-color: rgba($color: #000000, $alpha: 0.8);*/
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    animation: fade-out .5s;
+}
+
+/*.Modal*/ .Container{
+    background-color: #fff;
+    width: 60%;
+    height: 60%;
+    border-radius: 15px;
+    animation: bottom-to-center .5s;
+}
+
+.ContainerClose{
+    background-color: #fff;
+    width: 60%;
+    height: 60%;
+    border-radius: 15px;
+    animation: center-to-bottom .5s;
+}
+
+/*.Modal .Container */.Close{
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    border: none;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    right: calc(-100% + 64px);
+    top: 16px;
+    cursor: pointer;
+}
+
+/*.Modal .Container */.Close span{
+    font-size: 20px;
+    color: #1e88e5;
+}
+
+@keyframes bottom-to-center {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes center-to-bottom {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
