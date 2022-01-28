@@ -1,0 +1,23 @@
+.Scheduling {
+    display: grid;
+    gap: 0.9375rem;
+    grid-template-rows: max-content minmax(120px, 1fr);
+    flex: 1;
+    height: calc(100vh - 30px);
+    margin: 15px;
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+@media screen and (max-width: 500){
+    .Scheduling {
+        display: grid;
+        gap: 0.9375rem;
+        grid-template-rows: max-content minmax(120px, 1fr);
+        flex: 1;
+        height: calc(100vh - 500px);
+        margin: 15px;
+        /*display: flex;
+        flex-direction: column;*/
+    }
+}

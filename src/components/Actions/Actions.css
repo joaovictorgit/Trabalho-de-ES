@@ -6,6 +6,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2px;
-    margin-bottom: 0.9375rem;
+    /*margin-bottom: 0.9375rem;*/
     justify-content: space-between;
 }

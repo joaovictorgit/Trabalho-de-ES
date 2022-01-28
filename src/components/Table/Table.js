@@ -3,6 +3,7 @@ import DeleteButton from "../Buttons/DeleteButton/DeleteButton";
 import './Table.css'
 
 const Table = ({tableTitles, tableData, deleteFunction}) => {
+
     return (
         <div className="Table">
             <div className="TableTitle">
@@ -30,11 +31,13 @@ const Table = ({tableTitles, tableData, deleteFunction}) => {
                     return(
                         <div className="TableRow" key={key}>
                             {allValue().map((item, key) => {
-                                return (
-                                    <span className="TableItem" key={key}>{item}</span>
-                                )
+                                if(key > 0){
+                                    return (
+                                        <span className="TableItem" key={key}>{item}</span>
+                                    )
+                                }
                             })}
-                            <div className="TableItem"><DeleteButton onClick={() => deleteFunction(allValue()[0])}/></div>
+                            <div className="TableItem"><DeleteButton onClick={() => {deleteFunction(allValue()[0])}}/></div>
                         </div>
                     )
                 })}

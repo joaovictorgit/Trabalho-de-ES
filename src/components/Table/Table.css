@@ -5,7 +5,20 @@
     box-shadow: 0px 0px 5px black;
     border-radius: 5px;
     width: 100%;
-    flex: 1;
+    /*flex: 1;*/
+}
+
+@media screen and (max-width: 500px){
+    .Table {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0px 0px 5px black;
+        border-radius: 5px;
+        width: 100%;
+        height: calc(100vh - 266px);
+        /*flex: 1;*/
+    }
 }
 
 .Table .TableTitle {
@@ -35,13 +48,15 @@
 }
 
 .Table .TableBody{
-    flex: 1;
+    flex: 1 1 200px;
     display: flex;
     flex-direction: column;
     /*grid-template-columns: 1fr;*/
     width: 100%;
     overflow: auto;
-    flex-basis: 200px;
+    /*flex-basis: 200px;*/
+    /*flex-grow: 400px;*/
+
 }
 
 .Table .TableBody .TableRow {
@@ -50,6 +65,7 @@
     min-height: 30px;
     max-height: 70px;
     align-items: stretch;
+    animation: fadein-to-bottom .5s;
 }
 
 .Table .TableBody .TableRow:nth-child(odd){
@@ -84,6 +100,11 @@
 ::-webkit-scrollbar-thumb{
     background-color: #1e88e5;
     border-radius: 5px;
+}
+
+@keyframes fadein-to-bottom {
+    from { transform: translateY(-100%); opacity: 0}
+    to   { transform: translateY(0); opacity: 1}
 }
 
 /*.Table {

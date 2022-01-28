@@ -1,9 +1,13 @@
 .Doctor {
+    display: grid;
+    grid-template-rows: max-content max-content 1fr;
+    gap: 0.9375rem;
     flex: 1;
-    /*height: calc(100vh - 30px);*/
     margin: 15px;
+    /*height: calc(100vh - 30px);*/
+    /*margin: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;*/
 }
 /*
 @media screen and (max-width: 500px){

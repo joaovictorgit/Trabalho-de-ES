@@ -1,35 +1,39 @@
 import {useState, useEffect} from 'react';
-
+import { collection, getDoc,getDocs, addDoc, doc, deleteDoc, where, query} from "firebase/firestore";
 import {db} from "../config/firebase-config";
 
 
-const PacientController = () => {
-    const [pacient, setPacient] = useState([]);
-
-    const getPacient = async () => {
-        db.collection("Pacientes").onSnapshot((querySnapshot) => {
-            const docs = [];
-            querySnapshot.forEach((doc) => {
-              docs.push({ ...doc.data(), id: doc.id });
-            });
-            setPacient(docs);
+const getPatients = async(setData) => {
+    const qs = await getDocs(/*query(*/collection(db, 'Pacientes')/*, where('crm', '==', '44444'))*/);
+    let datas = [];
+    qs.forEach((doc) => {
+        datas.push({
+            id: doc.id,
+            cpf: doc.data().cpf,
+            nome: doc.data().nome,
+            telefone: doc.data().telefone,
+            convenio: doc.data().convenio,
+            informacoes: doc.data().informacoes
         });
-    };
-    
+    });
+    setData(datas);
+}
 
-    useEffect(() => {
-        getPacient();
-    }, []);
 
-    return (
-        <div>
-            {pacient.map((p) =>(
-               <div>
-                   <h4>{p.id}</h4>
-                </div>
-            ))}
-        </div>
-    );
-};
 
-export default PacientController;
+const deletePatient = async(id) => {
+    await deleteDoc(doc(db, "Pacientes", id));
+}
+
+const addPatient = async(object) => {
+    await addDoc(collection(db, "Pacientes"), object);
+}
+
+const elementById = async({id, setData}) => {
+    /*const q = await getDoc(doc(db, "Medicos", id));
+    setData(q.data());
+    console.log(q.data());*/
+    console.log((await getDoc(doc(db, "Pacientes", id))).data());
+}
+
+export {getPatients, elementById, addPatient, deletePatient};

@@ -11,6 +11,7 @@
     align-items: center;
     overflow: hidden;
     animation: fade-in .5s;
+    z-index: 50;
 }
 
 .ModalClose{
@@ -30,22 +31,29 @@
 
 /*.Modal*/ .Container{
     background-color: #fff;
-    width: 60%;
-    height: 60%;
-    border-radius: 15px;
+    width: max-content;
+    height: max-content;
+    border-radius: 7px;
     animation: bottom-to-center .5s;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .ContainerClose{
     background-color: #fff;
-    width: 60%;
-    height: 60%;
-    border-radius: 15px;
+    width: max-content;
+    height: max-content;
+    border-radius: 7px;
     animation: center-to-bottom .5s;
 }
 
 /*.Modal .Container */.Close{
     background-color: transparent;
+    border: none;
+    cursor: pointer;
+    /*background-color: transparent;
     width: 24px;
     height: 24px;
     border: none;
@@ -55,7 +63,7 @@
     justify-content: center;
     right: calc(-100% + 64px);
     top: 16px;
-    cursor: pointer;
+    cursor: pointer;*/
 }
 
 /*.Modal .Container */.Close span{

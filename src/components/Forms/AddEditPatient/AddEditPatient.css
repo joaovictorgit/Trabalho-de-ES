@@ -1,0 +1,58 @@
+.addEditPatient {
+    /*display: flex;
+    flex-direction: column;*/
+    display: grid;
+    grid-template-rows: repeat(6, max-content);
+    gap: 5px;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #1e88e5;
+}
+
+.addEditPatient label{
+    font-weight:900;
+}
+
+.addEditPatient input{
+    width: 17.1rem;
+    height: 2rem;
+    border: 1px #1e88e5 solid;
+    border-radius: 5px;
+}
+
+.addEditPatient input:focus{
+    outline: none;
+}
+
+.addEditPatient textarea{
+    max-width: 17.1rem;
+    width: 17.1rem;
+    height: 4rem;
+    border: 1px #1e88e5 solid;
+    border-radius: 5px;
+}
+
+.addEditPatient textarea:focus{
+    outline: none;
+}
+
+.addEditPatient select{
+    height: 2rem;
+    border: 1px #1e88e5 solid;
+    border-radius: 5px;
+    color: #1e88e5;
+    font-weight: bold;
+}
+
+.addEditPatient option{
+    height: 2rem;
+}
+
+.addEditPatient .submit{
+    color: white;
+    height: 2rem;
+    background-color: #1e88e5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,6 @@
+.Home {
+    display: grid;
+    grid-template-rows: max-content;
+    margin: 15px;
+    flex: 1;
+}

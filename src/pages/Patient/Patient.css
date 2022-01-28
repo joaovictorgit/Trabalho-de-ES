@@ -1,6 +1,11 @@
 .Patient {
-    display: flex;
+    flex: 1;
+    display: grid;
+    grid-template-rows: max-content max-content 1fr;
+    gap: 0.9375rem;
+    margin: 15px;
+    /*display: flex;
     flex-direction: column;
     flex-grow: 1;
-    margin: 15px;
+    margin: 15px;*/
 }

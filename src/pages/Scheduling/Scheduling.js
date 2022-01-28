@@ -1,8 +1,15 @@
 import React from "react";
+import Header from "../../components/Header/Header";
+import {BsFillCalendarFill} from '@react-icons/all-files/bs/BsFillCalendarFill';
+import Schedule from "../../components/Schedule/Schedule";
+import './Scheduling.css';
 
 const Scheduling = () => {
     return(
-        <h1>Agendamento</h1>
+        <div className="Scheduling">
+            <Header title={'Agendamento'} icon={<BsFillCalendarFill/>}/>
+            <Schedule/>
+        </div>
     )
 }
 

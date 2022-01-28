@@ -1,0 +1,27 @@
+.AddSchedule {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    gap: 5px;
+}
+
+.AddSchedule select{
+    width: 17.1rem;
+    height: 2rem;
+    border: 1px #1e88e5 solid;
+    border-radius: 5px;
+    color: #1e88e5;
+    font-weight: bold;
+}
+
+.AddSchedule select:focus{
+    outline: none;
+}
+
+.AddSchedule .submit{
+    color: white;
+    height: 2rem;
+    background-color: #1e88e5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
