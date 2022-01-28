@@ -22,4 +22,10 @@
 .Frame .Box h1{
     font-size: 7rem;
     font-weight: 400;
+    animation: fadein-to-top 1s;
+}
+
+@keyframes fadein-to-top {
+    from { transform: translateY(70px); opacity: 0}
+    to   { transform: translateY(0); opacity: 1}
 }

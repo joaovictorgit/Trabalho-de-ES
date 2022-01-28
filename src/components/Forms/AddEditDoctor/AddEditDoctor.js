@@ -45,7 +45,7 @@ const AddEditDoctor = ({addDoctor, id, closeModal}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(formDoctor.nome !== '' && formDoctor.especializacao !== null && formDoctor.email !== null && formDoctor.crm.match(/[0-9]{5}[/][a-zA-Z]{2}/)){
+        if(formDoctor.nome !== '' && formDoctor.especializacao !== '' && formDoctor.email !== '' && formDoctor.crm.match(/[0-9]{5}[/][a-zA-Z]{2}/)){
             addDoctor(formDoctor);
             closeModal();
         }else{

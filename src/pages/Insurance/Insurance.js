@@ -29,7 +29,7 @@ const Insurance = () => {
         <div className="Insurance">
             <Header icon={<RiShieldCrossFill/>} title={'Convênio'}/>
             <Actions activeModal={setModalView}/>
-            <Table tableTitles={['Empresa', 'Cobertura', 'Periodo da parceria']} tableData={insuranceData} deleteFunction={deleteFunction}/>
+            <Table tableTitles={['Empresa', 'Cobertura (%)', 'Periodo da parceria (anos)']} tableData={insuranceData} deleteFunction={deleteFunction}/>
 
             {modalView ? <Modal onClose={() => setModalView(false)}><AddEditInsurance closeModal={() => setModalView(false)}/></Modal> : null}
         </div>
