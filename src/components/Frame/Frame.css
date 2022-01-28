@@ -1,0 +1,25 @@
+.Frame {
+    /*background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+}
+
+.Frame .Box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1e88e5;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+.Frame .Box h1{
+    font-size: 7rem;
+    font-weight: 400;
+}
