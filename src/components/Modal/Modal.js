@@ -15,7 +15,7 @@ const Modal = ({children, onClose}) => {
     const activeAnimationToClose = () => {
         setContainerClassName('ContainerClose');
         setModalClassName('ModalClose')
-        setTimeout(onClose, 500)
+        setTimeout(onClose, 490)
     }
 
     return (
